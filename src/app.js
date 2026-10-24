@@ -29,13 +29,25 @@
 
   const links = [...document.querySelectorAll('.cats a')];
   const map = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+  // Keep the active chip visible in the horizontal cats strip only —
+  // never call scrollIntoView on the link (that scrolls the page and fights the wheel).
+  const showChip = (a) => {
+    const nav = a?.closest('ul');
+    if (!a || !nav) return;
+    const pad = 16;
+    const left = a.offsetLeft - pad;
+    const right = a.offsetLeft + a.offsetWidth + pad;
+    if (left < nav.scrollLeft) nav.scrollTo({ left, behavior: 'smooth' });
+    else if (right > nav.scrollLeft + nav.clientWidth) nav.scrollTo({ left: right - nav.clientWidth, behavior: 'smooth' });
+  };
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
         if (!en.isIntersecting) return;
         links.forEach((a) => a.removeAttribute('aria-current'));
         const a = map.get(en.target.id);
-        if (a) { a.setAttribute('aria-current', 'true'); a.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }
+        if (a) { a.setAttribute('aria-current', 'true'); showChip(a); }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     document.querySelectorAll('.cat').forEach((s) => io.observe(s));
