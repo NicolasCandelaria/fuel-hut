@@ -135,12 +135,12 @@ ${live ? '' : '<meta name="robots" content="noindex, nofollow">'}
 <meta property="og:description" content="${esc(site.description)}">
 <meta property="og:image" content="${site.url}/images/site/smoothies-lineup.webp">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#F6C445">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,700..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 </head>
