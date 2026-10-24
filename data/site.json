@@ -1,0 +1,70 @@
+{
+  "name": "Fuel Hut",
+  "title": "Fuel Hut | Protein smoothies at New Westminster Station",
+  "description": "Protein smoothies, acai bowls, wraps and supplements at the New Westminster SkyTrain Station shops. Canadian and family owned.",
+  "url": "https://fuelhut.ca",
+  "address": {
+    "line1": "#331-800 Carnarvon St",
+    "line2": "New Westminster, BC V3M 0G3",
+    "landmark": "New Westminster SkyTrain Station shops, beside Dynamic Health & Fitness",
+    "mapsQuery": "800 Carnarvon St, New Westminster, BC"
+  },
+  "phone": "+17785030535",
+  "phoneDisplay": "778-503-0535",
+  "email": "info@fuelhut.ca",
+  "instagram": "https://www.instagram.com/fuelhut.nw/",
+  "instagramHandle": "@fuelhut.nw",
+  "orderUrl": "https://www.ubereats.com/ca/store/fuel-hut-smoothies-snacks-and-supplements-new-westminster/AtWkJsrAUSa8oHRFKg_c1g",
+  "hours": [],
+  "combos": [
+    { "label": "Any wrap with a 16 oz smoothie", "price": "$14.99" },
+    { "label": "Any wrap with a 24 oz smoothie", "price": "$16.99" }
+  ],
+  "comingSoon": "Protein-packed oatmeal cups",
+  "categories": [
+    {
+      "name": "Smoothies",
+      "id": "smoothies",
+      "layout": "plates",
+      "intro": "Every smoothie comes with one scoop of protein and no added sugar.",
+      "prices": [{ "label": "16 oz", "price": "$9.49" }, { "label": "24 oz", "price": "$10.99" }],
+      "notes": [
+        "Protein: chocolate, vanilla or strawberry banana. Extra scoop $1.00.",
+        "Liquid base: coconut water, unsweetened almond milk (white or chocolate) or filtered water."
+      ]
+    },
+    {
+      "name": "Acai Bowls",
+      "id": "acai-bowls",
+      "layout": "plates",
+      "intro": "16 oz bowls with fruit, granola and seeds on top.",
+      "prices": [{ "label": "Each", "price": "$12.99" }]
+    },
+    {
+      "name": "Wraps",
+      "id": "wraps",
+      "layout": "plates",
+      "intro": "Made fresh for the morning rush. The Protein Power wrap is $7.99.",
+      "prices": [{ "label": "Each", "price": "$6.99" }]
+    },
+    {
+      "name": "Wellness Shots",
+      "id": "shots",
+      "layout": "board",
+      "intro": "Small 2.5 oz shots to knock back at the counter.",
+      "prices": [{ "label": "Each", "price": "$2.50" }]
+    },
+    {
+      "name": "Soups & Pastries",
+      "id": "soups-pastries",
+      "layout": "board",
+      "intro": "Soups rotate through the week, so ask what's on today. 16 oz soups are $5.49."
+    },
+    {
+      "name": "Supplements",
+      "id": "supplements",
+      "layout": "shelf",
+      "intro": "Protein, pre-workout and greens from brands we use ourselves. Ask at the counter for current prices."
+    }
+  ]
+}

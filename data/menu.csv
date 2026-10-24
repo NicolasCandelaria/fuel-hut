@@ -1,0 +1,43 @@
+Sort,Title,Slug,Category,Tag,Ingredients,Price,Size,Extra,Description,Image
+1,Espresso Energizer,espresso-energizer,Smoothies,Coffee + protein,"Espresso, banana, medjool date, hemp seeds, almond butter, almond milk",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Real espresso blended with banana, date and almond butter. A breakfast and a coffee in one cup.",/images/menu/espresso-energizer.webp
+2,Mile High Mocha,mile-high-mocha,Smoothies,Cold brew,"Cold brew coffee, peanut or almond butter, cacao powder, chia seeds, almond milk",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Cold brew, cacao and nut butter for a mocha that keeps you going through the afternoon.",/images/menu/mile-high-mocha.webp
+3,Green Goddess,green-goddess,Smoothies,Greens,"Kale or spinach, greens powder, pineapple, chia, flax, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Leafy greens and greens powder, brightened with pineapple and thickened with Greek yogurt.",/images/menu/green-goddess.webp
+4,Brazilian Boost,brazilian-boost,Smoothies,Avocado + cacao,"Mixed berry, avocado, cacao, pineapple, banana, cinnamon, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Avocado makes it creamy, cacao and cinnamon make it taste like dessert.",/images/menu/brazilian-boost.webp
+5,Chocolate Peanut Butter,chocolate-peanut-butter,Smoothies,Peanut butter,"Peanut butter, chia and hemp seeds, cacao, dark chocolate chips, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"The classic pairing, with dark chocolate chips and a full scoop of protein.",/images/menu/chocolate-peanut-butter.webp
+6,Keto Power,keto-power,Smoothies,Keto-friendly,"Mixed berry, avocado, peas, peanut butter, chia and hemp seeds, almond milk, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Built on avocado, nut butter and seeds for a lower-carb blend that still tastes like berries.",/images/menu/keto-power.webp
+7,Iron Man,iron-man,Smoothies,High protein,"Peanut butter, banana, cacao powder, dried coconut, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Peanut butter, banana and cacao with Greek yogurt and a scoop of protein. Made for after the gym.",/images/menu/iron-man.webp
+8,Tropical Hawaiian Mango,tropical-hawaiian-mango,Smoothies,Tropical,"Strawberry, banana, pineapple, mango, dried coconut, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Mango, pineapple and coconut. Summer in a cup, any time of year.",/images/menu/tropical-hawaiian-mango.webp
+9,Gut Check,gut-check,Smoothies,Turmeric + ginger,"Mixed berry, pineapple, spinach, greens powder, turmeric, ginger powder, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Berries and pineapple carry the turmeric, ginger and greens.",/images/menu/gut-check.webp
+10,Fit 4 Life,fit-4-life,Smoothies,Bee pollen,"Strawberries, banana, pineapple, kale or spinach, alfalfa, bee pollen, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Fruit-forward with greens, alfalfa and bee pollen blended in.",/images/menu/fit-4-life.webp
+11,Chocolate Triple Berry,chocolate-triple-berry,Smoothies,Berry + cacao,"Triple berry blend, banana, cacao powder, chia seeds, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,Three berries and cacao. Tastes like chocolate-dipped fruit.,/images/menu/chocolate-triple-berry.webp
+12,Dynamic Duo,dynamic-duo,Smoothies,Classic,"Strawberries and banana, chia and hemp seeds, liquid base, Greek yogurt",$9.49,16 OZ $9.49 · 24 OZ $10.99,1 SCOOP PROTEIN · NO SUGAR ADDED,"Strawberry banana, done properly, with seeds and Greek yogurt.",/images/menu/dynamic-duo.webp
+13,Apple Pie,apple-pie,Acai Bowls,Oats + cinnamon,"Green apple, banana, oats, dates, cinnamon, ginger, nutmeg",$12.99,16 OZ,,An acai bowl that tastes like apple pie spice.,/images/menu/apple-pie.webp
+14,Tropicana,tropicana,Acai Bowls,Tropical,"Granola, banana, mango, dried coconut, pineapple",$12.99,16 OZ,,"Acai topped with mango, pineapple, coconut and granola.",/images/menu/tropicana.webp
+15,PB Honey & Oats,pb-honey-oats,Acai Bowls,Peanut butter,"Granola, flax, hemp, peanut butter, honey",$12.99,16 OZ,,"Acai with peanut butter, honey and a crunchy seed and granola topping.",/images/menu/pb-honey-oats.webp
+16,Nuts For You,nuts-for-you,Acai Bowls,Walnut + bee pollen,"Granola, flax, hemp, walnuts, bee pollen, honey",$12.99,16 OZ,,"Acai with walnuts, seeds, bee pollen and a drizzle of honey.",/images/menu/nuts-for-you.webp
+17,Vegan Wrap,vegan-wrap,Wraps,Vegan,"Spinach tortilla, rice, vegetables",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/vegan-wrap.webp
+18,Teriyaki Wrap,teriyaki-wrap,Wraps,Chicken,"Pesto tortilla, rice, marinated chicken",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/teriyaki-wrap.webp
+19,Breakfast Wrap,breakfast-wrap,Wraps,All-day breakfast,"Plain tortilla, egg, potato, ham",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/breakfast-wrap.webp
+20,South Western Egg Wrap,south-western-egg-wrap,Wraps,Vegetarian,"Plain tortilla, egg, potato, cheese, vegetables",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/south-western-egg-wrap.webp
+21,Protein Power Wrap,protein-power-wrap,Wraps,High protein,"Whole wheat tortilla, egg white, quinoa, black bean, cheddar, spinach",$7.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/protein-power-wrap.webp
+22,Gut Booster,gut-booster,Wellness Shots,Turmeric,"Pineapple, ginger, turmeric",$2.50,2.5 OZ,,,
+23,Immune Booster,immune-booster,Wellness Shots,Beet + cayenne,"Beet, lemon juice, apple, ginger, cayenne pepper",$2.50,2.5 OZ,,,
+24,Energy Booster,energy-booster,Wellness Shots,Wheatgrass,"Wheatgrass, lemon juice, honey",$2.50,2.5 OZ,,,
+25,Antioxidant Booster,antioxidant-booster,Wellness Shots,Citrus + ginger,"Orange, ginger, cayenne pepper",$2.50,2.5 OZ,,,
+26,Preworkout Shot,preworkout-shot,Wellness Shots,Pre-gym,Preworkout and creatine,$2.50,2.5 OZ,,,
+27,Classic Chicken Noodle,classic-chicken-noodle,Soups & Pastries,Weekly soup,,$5.49,16 OZ,,,
+28,Vegetable Beef,vegetable-beef,Soups & Pastries,Weekly soup,,$5.49,16 OZ,,,
+29,Thai Chicken Soup,thai-chicken-soup,Soups & Pastries,Weekly soup,,$5.49,16 OZ,,,
+30,Tomato Basil,tomato-basil,Soups & Pastries,Weekly soup,,$5.49,16 OZ,,,
+31,Spinach Filo,spinach-filo,Soups & Pastries,Pastry,"Filo pastry, spinach, onion, eggs, feta cheese",$6.99,,,,
+32,Salmon & Spinach Filo,salmon-spinach-filo,Soups & Pastries,Pastry,"Filo pastry, salmon, spinach, cheese, feta cheese",$7.99,,,,
+33,ISO Advanced Whey Isolate,iso-advanced-whey-isolate,Supplements,Pro Line,100% cold-filtered whey isolate protein,In store,,,,/images/menu/iso-advanced-whey-isolate.webp
+34,ISO Advanced All Natural,iso-advanced-all-natural,Supplements,Pro Line,All-natural cold-filtered whey isolate protein,In store,,,,/images/menu/iso-advanced-all-natural.webp
+35,Creatine HCL (Blue Raspberry),creatine-hcl-blue-raspberry,Supplements,Pro Line,Creatine HCL cell volumizer. Flavour to confirm,In store,,,,/images/menu/creatine-hcl-blue-raspberry.webp
+36,Creatine HCL (Berry),creatine-hcl-berry,Supplements,Pro Line,Creatine HCL cell volumizer. Flavour to confirm,In store,,,,/images/menu/creatine-hcl-berry.webp
+37,Overkill Pre-Workout,overkill-pre-workout,Supplements,Pro Line,Ultimate pre-workout,In store,,,,/images/menu/overkill-pre-workout.webp
+38,Rush Pre-Workout,rush-pre-workout,Supplements,Pro Line,Concentrated pre-workout,In store,,,,/images/menu/rush-pre-workout.webp
+39,IsoGold Whey Isolate,isogold-whey-isolate,Supplements,PVL,Premium whey protein isolate,In store,,,,/images/menu/isogold-whey-isolate.webp
+40,Clean Mass XL,clean-mass-xl,Supplements,PVL,Mass gainer,In store,,,,/images/menu/clean-mass-xl.webp
+41,C4 Original Pre-Workout,c4-original-pre-workout,Supplements,Cellucor,Explosive pre-workout,In store,,,,/images/menu/c4-original-pre-workout.webp
+42,True Greens,true-greens,Supplements,Alora Naturals,Greens superfood powder,In store,,,,/images/menu/true-greens.webp
