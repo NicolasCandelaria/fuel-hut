@@ -1,8 +1,23 @@
-// Item details dialog and category nav highlight.
+// Item details dialog, mobile nav, and category nav highlight.
 (() => {
   const dlg = document.getElementById('item');
   const $ = (id) => document.getElementById(id);
   let opener = null;
+
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('nav');
+  const closeNav = () => {
+    document.body.classList.remove('nav-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Open menu');
+  };
+  toggle?.addEventListener('click', () => {
+    const open = document.body.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav?.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeNav));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
 
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.plate');

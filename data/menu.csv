@@ -15,8 +15,8 @@ Sort,Title,Slug,Category,Tag,Ingredients,Price,Size,Extra,Description,Image
 14,Tropicana,tropicana,Acai Bowls,Tropical,"Granola, banana, mango, dried coconut, pineapple",$12.99,16 OZ,,"Acai topped with mango, pineapple, coconut and granola.",/images/menu/tropicana.webp
 15,PB Honey & Oats,pb-honey-oats,Acai Bowls,Peanut butter,"Granola, flax, hemp, peanut butter, honey",$12.99,16 OZ,,"Acai with peanut butter, honey and a crunchy seed and granola topping.",/images/menu/pb-honey-oats.webp
 16,Nuts For You,nuts-for-you,Acai Bowls,Walnut + bee pollen,"Granola, flax, hemp, walnuts, bee pollen, honey",$12.99,16 OZ,,"Acai with walnuts, seeds, bee pollen and a drizzle of honey.",/images/menu/nuts-for-you.webp
-17,Vegan Wrap,vegan-wrap,Wraps,Vegan,"Spinach tortilla, rice, vegetables",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/vegan-wrap.webp
-18,Teriyaki Wrap,teriyaki-wrap,Wraps,Chicken,"Pesto tortilla, rice, marinated chicken",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/teriyaki-wrap.webp
+17,Vegan Veggie Wrap,vegan-wrap,Wraps,Vegan,"Spinach tortilla, rice, vegetables",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/vegan-wrap.webp
+18,Teriyaki Chicken Wrap,teriyaki-wrap,Wraps,Chicken,"Pesto tortilla, rice, marinated chicken",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/teriyaki-wrap.webp
 19,Breakfast Wrap,breakfast-wrap,Wraps,All-day breakfast,"Plain tortilla, egg, potato, ham",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/breakfast-wrap.webp
 20,South Western Egg Wrap,south-western-egg-wrap,Wraps,Vegetarian,"Plain tortilla, egg, potato, cheese, vegetables",$6.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/south-western-egg-wrap.webp
 21,Protein Power Wrap,protein-power-wrap,Wraps,High protein,"Whole wheat tortilla, egg white, quinoa, black bean, cheddar, spinach",$7.99,,COMBO WITH A SMOOTHIE FROM $14.99,,/images/menu/protein-power-wrap.webp

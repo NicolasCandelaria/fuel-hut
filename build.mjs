@@ -47,11 +47,6 @@ async function loadMenu() {
 
 const esc = (s = '') => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-const sun = (cls = '') => `<svg class="${cls}" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
-  <g class="rays">${Array.from({ length: 16 }, (_, i) => `<path d="M100 6 L108 40 L92 40 Z" transform="rotate(${i * 22.5} 100 100)"/>`).join('')}</g>
-  <circle cx="100" cy="100" r="52"/>
-</svg>`;
-
 function plate(item) {
   return `<li>
     <button class="plate" type="button" data-slug="${esc(item.Slug)}">
@@ -91,6 +86,9 @@ function section(cat, items, site) {
     ? `<div class="combo"><p class="combo-title">Make it a combo</p><ul>${site.combos.map((c) => `<li><span>${esc(c.label)}</span><strong>${esc(c.price)}</strong></li>`).join('')}</ul></div>`
     : '';
   const soon = cat.id === 'acai-bowls' && site.comingSoon ? `<p class="soon">Coming soon: ${esc(site.comingSoon)}.</p>` : '';
+  const brands = cat.id === 'supplements' && site.brands?.length
+    ? `<div class="brands" aria-label="Supplement brands we carry"><p class="brands-label">Brands on our shelf</p><ul>${site.brands.map((b) => `<li><img src="${esc(b.image)}" alt="${esc(b.name)}" loading="lazy" height="48"></li>`).join('')}</ul></div>`
+    : '';
   return `<section class="cat cat-${cat.layout}" id="${cat.id}" aria-labelledby="${cat.id}-h">
     <div class="cat-head">
       <h2 id="${cat.id}-h">${esc(cat.name)}</h2>
@@ -98,7 +96,7 @@ function section(cat, items, site) {
       <p class="cat-intro">${esc(cat.intro || '')}</p>
       ${notes ? `<ul class="notes">${notes}</ul>` : ''}
     </div>
-    ${list}${combos}${soon}
+    ${brands}${list}${combos}${soon}
   </section>`;
 }
 
@@ -146,19 +144,28 @@ ${live ? '' : '<meta name="robots" content="noindex, nofollow">'}
 </head>
 <body>
 <a class="skip" href="#menu">Skip to the menu</a>
+${site.banner ? `<p class="notice">${esc(site.banner)}</p>` : ''}
 <header class="bar">
-  <a class="brand" href="/" aria-label="Fuel Hut home">${sun('brand-sun')}<span>fuel hut</span></a>
-  <nav class="bar-nav" aria-label="Main">
+  <a class="brand" href="/" aria-label="Fuel Hut home">
+    <img class="brand-mark" src="/images/site/logo-mark.png" alt="" width="48" height="48">
+    <img class="brand-word" src="/images/site/logo-wordmark.webp" alt="Fuel Hut — Smoothies, Supplements, Snacks" width="280" height="67">
+  </a>
+  <nav class="bar-nav" id="nav" aria-label="Main">
     <a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Visit</a>
+    <a class="bar-nav-order" href="${site.orderUrl}" rel="noopener">Order on Uber Eats</a>
   </nav>
   <a class="btn btn-dark bar-order" href="${site.orderUrl}" rel="noopener">Order on Uber Eats</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <main>
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero-copy">
+    <p class="eyebrow">${esc(site.tagline || 'Smoothies | Supplements | Snacks')}</p>
     <h1 id="hero-h">Fuel up before the train.</h1>
-    <p class="lede">Protein smoothies, acai bowls, wraps and supplements at the New Westminster SkyTrain Station shops, beside Dynamic Health &amp; Fitness.</p>
+    <p class="lede">Protein smoothies, wraps and supplements at the New Westminster SkyTrain Station shops, beside Dynamic Health &amp; Fitness. Canadian and family owned.</p>
     <div class="board-price" role="group" aria-label="Smoothie prices">
       <div><span class="size">16 oz</span><span class="amt">$9.49</span></div>
       <div><span class="size">24 oz</span><span class="amt">$10.99</span></div>
@@ -169,9 +176,8 @@ ${live ? '' : '<meta name="robots" content="noindex, nofollow">'}
       <a class="btn btn-line" href="#menu">See the full menu</a>
     </div>
   </div>
-  <div class="hero-art" aria-hidden="true">
-    ${sun('hero-sun')}
-    <img src="/images/menu/espresso-energizer.webp" alt="" fetchpriority="high">
+  <div class="hero-art">
+    <img src="/images/site/smoothies-lineup.webp" alt="A lineup of Fuel Hut smoothies with fresh fruit" fetchpriority="high" width="800" height="800">
   </div>
 </section>
 
@@ -219,7 +225,10 @@ ${site.categories.map((c) => section(c, byCat(c.name), site)).join('\n')}
 </main>
 
 <footer class="foot">
-  <a class="brand" href="/" aria-label="Fuel Hut home">${sun('brand-sun')}<span>fuel hut</span></a>
+  <a class="brand" href="/" aria-label="Fuel Hut home">
+    <img class="brand-mark" src="/images/site/logo-mark.png" alt="" width="40" height="40">
+    <span>Fuel Hut</span>
+  </a>
   <p>Canadian and family owned. &copy; ${new Date().getFullYear()} Fuel Hut.</p>
 </footer>
 

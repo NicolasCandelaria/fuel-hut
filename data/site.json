@@ -16,11 +16,20 @@
   "instagramHandle": "@fuelhut.nw",
   "orderUrl": "https://www.ubereats.com/ca/store/fuel-hut-smoothies-snacks-and-supplements-new-westminster/AtWkJsrAUSa8oHRFKg_c1g",
   "hours": [],
+  "banner": "Support Canadian family owned businesses — not American-owned franchises.",
+  "tagline": "Smoothies | Supplements | Snacks",
   "combos": [
     { "label": "Any wrap with a 16 oz smoothie", "price": "$14.99" },
     { "label": "Any wrap with a 24 oz smoothie", "price": "$16.99" }
   ],
   "comingSoon": "Protein-packed oatmeal cups",
+  "brands": [
+    { "name": "PVL", "image": "/images/site/brands/pvl.webp" },
+    { "name": "ProLine", "image": "/images/site/brands/proline.webp" },
+    { "name": "ALLMAX", "image": "/images/site/brands/allmax.webp" },
+    { "name": "Optimum Nutrition", "image": "/images/site/brands/optimum-nutrition.webp" },
+    { "name": "Mama T's", "image": "/images/site/brands/mama-ts.webp" }
+  ],
   "categories": [
     {
       "name": "Smoothies",
