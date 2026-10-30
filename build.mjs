@@ -87,7 +87,7 @@ function section(cat, items, site) {
     : '';
   const soon = cat.id === 'acai-bowls' && site.comingSoon ? `<p class="soon">Coming soon: ${esc(site.comingSoon)}.</p>` : '';
   const brands = cat.id === 'supplements' && site.brands?.length
-    ? `<div class="brands" aria-label="Supplement brands we carry"><p class="brands-label">Brands on our shelf</p><ul>${site.brands.map((b) => `<li><img src="${esc(b.image)}" alt="${esc(b.name)}" loading="lazy" height="48"></li>`).join('')}</ul></div>`
+    ? `<div class="brands" aria-label="Supplement brands we carry"><p class="brands-label">Brands on our shelf</p><ul>${site.brands.map((b) => `<li><img src="${esc(b.image)}" alt="${esc(b.name)}" loading="lazy"></li>`).join('')}</ul></div>`
     : '';
   return `<section class="cat cat-${cat.layout}" id="${cat.id}" aria-labelledby="${cat.id}-h">
     <div class="cat-head">
@@ -147,8 +147,7 @@ ${live ? '' : '<meta name="robots" content="noindex, nofollow">'}
 ${site.banner ? `<p class="notice">${esc(site.banner)}</p>` : ''}
 <header class="bar">
   <a class="brand" href="/" aria-label="Fuel Hut home">
-    <img class="brand-mark" src="/images/site/logo-mark.png" alt="" width="48" height="48">
-    <img class="brand-word" src="/images/site/logo-wordmark.webp" alt="Fuel Hut — Smoothies, Supplements, Snacks" width="280" height="67">
+    <img class="brand-lockup" src="/images/site/logo-lockup.png" alt="Fuel Hut — Smoothies, Supplements, Snacks" width="1078" height="254">
   </a>
   <nav class="bar-nav" id="nav" aria-label="Main">
     <a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Visit</a>

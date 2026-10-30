@@ -24,11 +24,13 @@
   ],
   "comingSoon": "Protein-packed oatmeal cups",
   "brands": [
-    { "name": "PVL", "image": "/images/site/brands/pvl.webp" },
-    { "name": "ProLine", "image": "/images/site/brands/proline.webp" },
-    { "name": "ALLMAX", "image": "/images/site/brands/allmax.webp" },
-    { "name": "Optimum Nutrition", "image": "/images/site/brands/optimum-nutrition.webp" },
-    { "name": "Mama T's", "image": "/images/site/brands/mama-ts.webp" }
+    { "name": "Believe Supplements", "image": "/images/site/brands/believe.png" },
+    { "name": "ALLMAX", "image": "/images/site/brands/allmax.png" },
+    { "name": "Mama T's", "image": "/images/site/brands/mama-ts.png" },
+    { "name": "Alora Naturals", "image": "/images/site/brands/alora.png" },
+    { "name": "Optimum Nutrition", "image": "/images/site/brands/optimum-nutrition.png" },
+    { "name": "PVL", "image": "/images/site/brands/pvl.png" },
+    { "name": "ProLine", "image": "/images/site/brands/proline.png" }
   ],
   "categories": [
     {
