@@ -61,20 +61,56 @@
   const nextBrand = document.querySelector('.brand-next');
   if (track && prevBrand && nextBrand) {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const step = () => Math.max(160, Math.round(track.clientWidth * 0.72));
-    const atStart = () => track.scrollLeft <= 2;
-    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-    const sync = () => {
-      const overflow = track.scrollWidth > track.clientWidth + 4;
-      prevBrand.hidden = nextBrand.hidden = !overflow;
-      prevBrand.disabled = !overflow || atStart();
-      nextBrand.disabled = !overflow || atEnd();
+    const originals = [...track.children];
+    const count = originals.length;
+    const before = document.createDocumentFragment();
+    const after = document.createDocumentFragment();
+    originals.forEach((li) => {
+      const lead = li.cloneNode(true);
+      const tail = li.cloneNode(true);
+      lead.setAttribute('aria-hidden', 'true');
+      tail.setAttribute('aria-hidden', 'true');
+      before.append(lead);
+      after.append(tail);
+    });
+    track.prepend(before);
+    track.append(after);
+    const loopWidth = () => {
+      const start = track.children[count];
+      const next = track.children[count * 2];
+      if (!start || !next) return 0;
+      return next.offsetLeft - start.offsetLeft;
+    };
+    const jump = () => {
+      const width = loopWidth();
+      if (width <= 0) return;
+      const left = track.scrollLeft;
+      if (left < width * 0.5 || left >= width * 1.5) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft = left < width * 0.5 ? left + width : left - width;
+        track.style.scrollBehavior = '';
+      }
+    };
+    const center = () => {
+      const width = loopWidth();
+      if (width <= 0) return;
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = width;
+      track.style.scrollBehavior = '';
+    };
+    const step = () => {
+      const item = track.children[count];
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return item ? item.getBoundingClientRect().width + gap : 180;
     };
     prevBrand.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: reduced ? 'auto' : 'smooth' }));
     nextBrand.addEventListener('click', () => track.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }));
-    track.addEventListener('scroll', sync, { passive: true });
-    window.addEventListener('resize', sync);
-    sync();
+    track.addEventListener('scroll', jump, { passive: true });
+    window.addEventListener('resize', center);
+    track.querySelectorAll('img').forEach((img) => {
+      if (!img.complete) img.addEventListener('load', center, { once: true });
+    });
+    center();
   }
 
   if ('IntersectionObserver' in window) {

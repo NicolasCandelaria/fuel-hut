@@ -253,11 +253,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotate
   width: 40px; height: 40px; flex: none; border-radius: 50%;
   border: 2px solid var(--roast); background: var(--page); color: var(--roast);
   display: grid; place-items: center; cursor: pointer; padding: 0;
+  opacity: .35;
 }
 .brand-prev { left: 8px; }
 .brand-next { right: 8px; }
-.brand-arrow:hover { background: var(--roast); color: var(--page); }
-.brand-arrow:disabled { opacity: .35; cursor: default; }
+.brand-arrow:hover { opacity: .9; background: var(--roast); color: var(--page); }
 .brand-arrow::before {
   content: ""; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
 }
