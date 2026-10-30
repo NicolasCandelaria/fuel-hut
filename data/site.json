@@ -24,13 +24,13 @@
   ],
   "comingSoon": "Protein-packed oatmeal cups",
   "brands": [
-    { "name": "Believe Supplements", "image": "/images/site/brands/believe.png" },
-    { "name": "ALLMAX", "image": "/images/site/brands/allmax.png" },
-    { "name": "Mama T's", "image": "/images/site/brands/mama-ts.png" },
-    { "name": "Alora Naturals", "image": "/images/site/brands/alora.png" },
-    { "name": "Optimum Nutrition", "image": "/images/site/brands/optimum-nutrition.png" },
-    { "name": "PVL", "image": "/images/site/brands/pvl.png" },
-    { "name": "ProLine", "image": "/images/site/brands/proline.png" }
+    { "name": "Believe Supplements", "image": "/images/site/brands/believe.png", "width": 544, "height": 557 },
+    { "name": "ALLMAX", "image": "/images/site/brands/allmax.png", "width": 220, "height": 64 },
+    { "name": "Mama T's", "image": "/images/site/brands/mama-ts.png", "width": 200, "height": 56 },
+    { "name": "Alora Naturals", "image": "/images/site/brands/alora.png", "width": 449, "height": 112 },
+    { "name": "Optimum Nutrition", "image": "/images/site/brands/optimum-nutrition.png", "width": 2196, "height": 468 },
+    { "name": "PVL", "image": "/images/site/brands/pvl.png", "width": 185, "height": 125 },
+    { "name": "ProLine", "image": "/images/site/brands/proline.png", "width": 2020, "height": 412 }
   ],
   "categories": [
     {

@@ -56,6 +56,27 @@
     else if (right > nav.scrollLeft + nav.clientWidth) nav.scrollTo({ left: right - nav.clientWidth, behavior: 'smooth' });
   };
 
+  const track = document.querySelector('.brand-track');
+  const prevBrand = document.querySelector('.brand-prev');
+  const nextBrand = document.querySelector('.brand-next');
+  if (track && prevBrand && nextBrand) {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const step = () => Math.max(160, Math.round(track.clientWidth * 0.72));
+    const atStart = () => track.scrollLeft <= 2;
+    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    const sync = () => {
+      const overflow = track.scrollWidth > track.clientWidth + 4;
+      prevBrand.hidden = nextBrand.hidden = !overflow;
+      prevBrand.disabled = !overflow || atStart();
+      nextBrand.disabled = !overflow || atEnd();
+    };
+    prevBrand.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: reduced ? 'auto' : 'smooth' }));
+    nextBrand.addEventListener('click', () => track.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }));
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  }
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
