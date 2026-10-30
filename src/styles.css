@@ -223,31 +223,65 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-8px) rotate
 }
 
 /* Shelf: supplements */
-.brands { margin: 0 0 36px; }
+.brands { margin: 0 0 32px; }
 .brands-label {
-  margin: 0 0 16px; font-family: var(--display); font-weight: 600;
+  margin: 0 0 14px; font-family: var(--display); font-weight: 600;
   font-size: clamp(1.45rem, 2.4vw, 1.9rem); letter-spacing: -0.015em;
 }
-.brands ul {
-  list-style: none; margin: 0; padding: 32px 36px;
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px 48px;
-  background: var(--page); border: 2px solid var(--roast); border-radius: 20px;
+.brand-carousel {
+  position: relative;
+  background: var(--page); border: 2px solid var(--roast); border-radius: 20px; padding: 12px 0;
 }
-.brands li { display: flex; align-items: center; justify-content: center; margin: 0; max-width: 100%; }
-.brands img { display: block; height: 92px; width: auto; max-width: none; object-fit: contain; }
+.brand-track {
+  list-style: none; margin: 0; padding: 8px 48px;
+  display: flex; align-items: center; gap: 32px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.brand-track::-webkit-scrollbar { display: none; }
+.brand-track li {
+  flex: 0 0 auto; scroll-snap-align: center;
+  display: flex; align-items: center; justify-content: center;
+  height: 64px; margin: 0;
+}
+.brand-track img {
+  display: block; width: auto; height: auto;
+  max-height: 48px; max-width: 168px; object-fit: contain;
+}
+.brand-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;
+  width: 40px; height: 40px; flex: none; border-radius: 50%;
+  border: 2px solid var(--roast); background: var(--page); color: var(--roast);
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+}
+.brand-prev { left: 8px; }
+.brand-next { right: 8px; }
+.brand-arrow:hover { background: var(--roast); color: var(--page); }
+.brand-arrow:disabled { opacity: .35; cursor: default; }
+.brand-arrow::before {
+  content: ""; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+}
+.brand-prev::before { transform: rotate(135deg); margin-left: 3px; }
+.brand-next::before { transform: rotate(-45deg); margin-right: 3px; }
 .shelf {
-  list-style: none; margin: 0; padding: 28px; background: var(--milk); border: 2px solid var(--roast); border-radius: 20px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 28px 20px;
+  list-style: none; margin: 0; padding: 20px 16px; background: var(--milk); border: 2px solid var(--roast); border-radius: 20px;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px;
 }
-.shelf-item { display: flex; flex-direction: column; gap: 2px; }
-.shelf-item img { height: 150px; width: 100%; object-fit: contain; margin-bottom: 10px; }
-.shelf-brand { font-size: .85rem; color: var(--milk-2); font-weight: 700; }
-.shelf-name { font-weight: 700; line-height: 1.3; }
-@media (max-width: 560px) {
-  .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 20px; }
-  .shelf-item img { height: 120px; }
-  .brands ul { gap: 22px 28px; padding: 22px 16px; }
-  .brands img { height: auto; max-height: 72px; max-width: 100%; }
+.shelf-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; min-width: 0; }
+.shelf-item img { height: 132px; width: 100%; object-fit: contain; margin-bottom: 8px; }
+.shelf-brand { font-size: .78rem; color: var(--milk-2); font-weight: 700; letter-spacing: .01em; }
+.shelf-name { font-weight: 700; line-height: 1.25; font-size: .95rem; }
+@media (min-width: 821px) {
+  .brand-carousel { padding: 16px 0; }
+  .brand-track { gap: 44px; padding: 12px 56px; }
+  .brand-track li { height: 72px; }
+  .brand-track img { max-height: 52px; max-width: 200px; }
+  .shelf {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 36px 18px; padding: 32px 24px;
+  }
+  .shelf-item img { height: 150px; }
+  .shelf-name { font-size: 1rem; }
 }
 
 /* Story */

@@ -87,7 +87,14 @@ function section(cat, items, site) {
     : '';
   const soon = cat.id === 'acai-bowls' && site.comingSoon ? `<p class="soon">Coming soon: ${esc(site.comingSoon)}.</p>` : '';
   const brands = cat.id === 'supplements' && site.brands?.length
-    ? `<div class="brands" aria-label="Supplement brands we carry"><p class="brands-label">Brands on our shelf</p><ul>${site.brands.map((b) => `<li><img src="${esc(b.image)}" alt="${esc(b.name)}" loading="lazy"></li>`).join('')}</ul></div>`
+    ? `<div class="brands">
+      <p class="brands-label">Brands on our shelf</p>
+      <div class="brand-carousel">
+        <button class="brand-arrow brand-prev" type="button" aria-label="Previous brands"></button>
+        <ul class="brand-track">${site.brands.map((b) => `<li><img src="${esc(b.image)}" alt="${esc(b.name)}" width="${Number(b.width) || 200}" height="${Number(b.height) || 80}" loading="lazy" decoding="async"></li>`).join('')}</ul>
+        <button class="brand-arrow brand-next" type="button" aria-label="Next brands"></button>
+      </div>
+    </div>`
     : '';
   return `<section class="cat cat-${cat.layout}" id="${cat.id}" aria-labelledby="${cat.id}-h">
     <div class="cat-head">
